@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#352342">
+  <title>The Wandering Reader | Books, Trinkets & Curiosities</title>
+  <meta name="description" content="Curated books, literary gifts, and little treasures. Find your next favorite adventure with The Wandering Reader.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">A little mystery. A new favorite. A reason to wander. ✦</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="The Wandering Reader home">
+      <img class="brand-logo" src="wandering-reader-logo.jpeg" alt="">
+      <span><strong>The Wandering Reader</strong><small>Books · Trinkets · Quiet Spaces</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#shop">Shop</a>
+      <a href="#quiz">Find Your Book</a>
+      <a href="#about">Our Story</a>
+      <button class="cart-button" id="openCart">Bag <span id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">BOOKS · TRINKETS · QUIET SPACES</p>
+        <h1>Find a little magic.<br><em>Wander into a story.</em></h1>
+        <p class="hero-text">A cozy corner for curious readers, surprise book dates, crafty little escapes, and literary treasures. Follow the raven and see where the next chapter takes you.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#shop">Explore the shelves</a>
+          <a class="button button-quiet" href="#quiz">Find my book ↗</a>
+        </div>
+        <p class="hero-note">Thoughtfully chosen. Delightfully unexpected. Always a little bit of magic.</p>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a mysterious stack of books">
+        <div class="moon"></div>
+        <div class="spark spark-one">✦</div><div class="spark spark-two">✧</div><div class="spark spark-three">✦</div>
+        <div class="book-stack">
+          <div class="book book-top"><span>A STORY<br>UNWRAPPED</span></div>
+          <div class="book book-middle"><span>THE NEXT<br>ADVENTURE</span></div>
+          <div class="book book-bottom"><span>WANDER<br>WONDER<br>REPEAT</span></div>
+        </div>
+        <div class="art-caption">your next chapter awaits</div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Shop categories"><span>Blind Dates with Books</span><b>✦</b><span>Blind Dates with Crafts</span><b>✦</b><span>Individual Books</span><b>✦</b><span>Bookish Gifts & Curiosities</span><b>✦</b><span>Mystery Bundles</span></section>
+
+    <section class="section shop-section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE LITTLE SHOP</p><h2>Something to <em>wander into.</em></h2></div>
+        <p>Browse surprise reads, creative escapes, individual books, thoughtful gifts, and mystery bundles. New treasures will find their way onto the shelves as the shop grows.</p>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="demo-note">Preview shop: products and prices are examples for now. We’ll update these with your real inventory.</p>
+    </section>
+
+    <section class="quiz-section" id="quiz">
+      <div class="quiz-intro">
+        <p class="eyebrow">THE BOOKISH MATCHMAKER</p>
+        <h2>Let fate pick<br><em>your next read.</em></h2>
+        <p>Tell us what you’re in the mood for. We’ll point you toward a Blind Date with a Book that fits your reading vibe.</p>
+        <div class="quiz-stamp">NO COVER.<br>NO CLUES?<br>JUST VIBES.</div>
+      </div>
+      <form class="quiz-card" id="bookQuiz">
+        <div class="quiz-progress"><span id="quizStepLabel">QUESTION 1 OF 3</span><span class="progress-track"><i id="progressBar"></i></span></div>
+        <fieldset data-step="0" class="quiz-step active">
+          <legend>What kind of world do you want to disappear into?</legend>
+          <label class="choice"><input type="radio" name="genre" value="romance" required><span>💕</span> Give me butterflies</label>
+          <label class="choice"><input type="radio" name="genre" value="mystery"><span>🔎</span> Secrets and suspense</label>
+          <label class="choice"><input type="radio" name="genre" value="fantasy"><span>🌙</span> Magic and other worlds</label>
+          <label class="choice"><input type="radio" name="genre" value="literary"><span>🕯️</span> Something meaningful</label>
+        </fieldset>
+        <fieldset data-step="1" class="quiz-step">
+          <legend>Pick your reading mood.</legend>
+          <label class="choice"><input type="radio" name="mood" value="cozy" required><span>☕</span> Cozy and comforting</label>
+          <label class="choice"><input type="radio" name="mood" value="dark"><span>🖤</span> Dark and twisty</label>
+          <label class="choice"><input type="radio" name="mood" value="emotional"><span>🥹</span> Make me feel things</label>
+          <label class="choice"><input type="radio" name="mood" value="adventurous"><span>⚡</span> Fast-paced adventure</label>
+        </fieldset>
+        <fieldset data-step="2" class="quiz-step">
+          <legend>How spicy should the story be?</legend>
+          <label class="choice"><input type="radio" name="spice" value="sweet" required><span>🌷</span> Sweet / closed-door</label>
+          <label class="choice"><input type="radio" name="spice" value="some"><span>🌶️</span> A little heat is fine</label>
+          <label class="choice"><input type="radio" name="spice" value="any"><span>🔥</span> No preference</label>
+          <p class="small-note">This is a preference guide, not a guarantee. We’ll list content notes with each book.</p>
+        </fieldset>
+        <div class="quiz-actions"><button type="button" class="button button-quiet" id="quizBack" disabled>← Back</button><button type="button" class="button button-primary" id="quizNext">Next question →</button></div>
+        <div id="quizResult" class="quiz-result" hidden aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section class="about-section section" id="about">
+      <div class="about-symbol">✦</div>
+      <div class="about-copy">
+        <p class="eyebrow">A NOTE FROM THE READER</p>
+        <h2>For the love of stories<br><em>and the joy of discovery.</em></h2>
+        <p>The Wandering Reader is a small bookish corner for people who love a good story, a thoughtful gift, and the thrill of not knowing exactly what’s inside the wrapping.</p>
+        <p>From Blind Dates with Books and crafty surprises to individual reads, mystery bundles, and little literary treasures, everything is an invitation to slow down, get curious, and wander somewhere new.</p>
+        <p>Shop online for shipping or arrange a local pickup. The shelves will keep growing as new books and curiosities find their way home.</p>
+        <p class="verse-note">“Consider the ravens…” <span>— Luke 12:24</span></p>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <p class="eyebrow">LETTERS FROM THE SHELVES</p>
+      <h2>Stay curious, bookworm.</h2>
+      <p>New surprises, shop updates, and little notes for fellow wanderers.</p>
+      <form id="newsletterForm" class="newsletter-form">
+        <label class="sr-only" for="newsletterEmail">Email address</label>
+        <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+        <button class="button button-primary" type="submit">Keep me posted</button>
+      </form>
+      <small id="newsletterMessage">No spam, just bookish things. Email signup will be connected later.</small>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#home">The Wandering Reader <span>✦</span></a>
+    <p>Not all who wander are lost… some are just looking for their next favorite book.</p>
+    <div class="footer-links"><a href="#shop">Shop</a><a href="#quiz">Find Your Book</a><a href="#about">Our Story</a></div>
+    <small>© <span id="year"></span> The Wandering Reader · Made for curious souls.</small>
+  </footer>
+
+  <div class="cart-backdrop" id="cartBackdrop" hidden>
+    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="cart-head"><h2 id="cartTitle">Your bookish bag</h2><button id="closeCart" aria-label="Close bag">×</button></div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-total"><span>Subtotal</span><strong id="cartTotal">$0.00</strong></div>
+      <p class="small-note">This is a starter demo. Checkout and payment processing have not been connected.</p>
+      <button class="button button-primary full-width" id="orderButton">Prepare order request</button>
+      <p id="orderMessage" class="small-note"></p>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
