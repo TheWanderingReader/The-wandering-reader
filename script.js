@@ -1,8 +1,32 @@
 const products = [
-  {id:1,name:"Blind Date with a Book",category:"The reader favorite",description:"A wrapped-up story chosen to surprise you. Genre clues included.",price:7.00,emoji:"📚",tag:"Mystery date"},
-  {id:2,name:"Blind Date with a Craft",category:"A creative little escape",description:"A small hands-on surprise for a cozy night in or a crafty date.",price:6.00,emoji:"🎨",tag:"Make something"},
-  {id:3,name:"A Book of Your Own",category:"Individual books",description:"A handpicked individual read for your next quiet evening or reading-list adventure.",price:8.00,emoji:"📖",tag:"Just one more chapter"},
-  {id:4,name:"Reader's Mystery Bundle",category:"A thoughtful surprise",description:"A bookish bundle with room for a surprise read, a tiny treasure, and a little magic.",price:12.00,emoji:"🎁",tag:"Bundle"}
+{
+id: 1,
+name: “Blind Date with a Book”,
+category: “The reader favorite”,
+description: “A wrapped-up story chosen to surprise you. Genre clues included.”,
+price: 20.00,
+emoji: “📚”,
+tag: “Mystery date”
+},
+{
+id: 2,
+name: “Blind Date with a Movie”,
+category: “Your next movie night”,
+description: “A surprise movie for a cozy night in or a memorable date night.”,
+price: 10.00,
+emoji: “🎬”,
+tag: “Press play”
+},
+{
+id: 3,
+name: “Blind Date with a Craft”,
+category: “A creative little escape”,
+description: “A hands-on surprise for a cozy night in or a crafty date.”,
+price: 8.00,
+emoji: “🎨”,
+tag: “Make something”
+}
+];
 ];
 let cart = [];
 const productGrid = document.getElementById("productGrid");
